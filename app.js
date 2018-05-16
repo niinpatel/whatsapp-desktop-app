@@ -1,7 +1,5 @@
 const electron = require('electron');
-const { shell, app, BrowserWindow } = electron;
-
-let mainWindow;
+const { app, BrowserWindow } = electron;
 
 app.on('ready', () => {
     window = new BrowserWindow({
@@ -12,8 +10,4 @@ app.on('ready', () => {
         }
     });
     window.loadURL('https://web.whatsapp.com');
-
-    window.on('closed', () => {
-        window = null;
-    });
 });
